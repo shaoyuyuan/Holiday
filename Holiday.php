@@ -43,12 +43,12 @@ trait Holiday
 
         //文件名
         $file_name = $data_path . DIRECTORY_SEPARATOR . date('Y') . '.json';
+
+        $jsonData = '';
         //检测本地是否存储了假期数据
         if (file_exists($file_name)) {
             //存在获取数据
-            $jsonData = file_get_contents($jsonFile);
-
-            $jsonData = json_decode($jsonData, true);
+            $jsonData = file_get_contents($file_name);
         } else {
             //data文件夹不存在创建并给权限
             if (!file_exists($data_path)) {
@@ -70,7 +70,8 @@ trait Holiday
                 file_put_contents($file_name, $jsonData);
             }
         }
-        return $jsonData;
+
+        return json_decode($jsonData, true);
     }
 
     /**
