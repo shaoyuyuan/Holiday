@@ -70,7 +70,7 @@ trait Holiday
                 file_put_contents($file_name, $jsonData);
             }
         }
-
+        return $jsonData;
     }
 
     /**
