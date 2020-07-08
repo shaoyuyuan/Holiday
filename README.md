@@ -28,4 +28,4 @@ class IndexController extends Controller
 }
 ```
 
-### ==注：==使用的免费接口，可能导致程序请求失败，人失效请考虑其他接口：http://timor.tech/api/holiday/
+### ==注：==使用的免费接口，可能导致程序请求失败，如失效请考虑其他接口：http://timor.tech/api/holiday/
